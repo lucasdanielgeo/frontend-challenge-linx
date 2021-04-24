@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="src/styles/buttons.css">
     <link rel="stylesheet" href="src/styles/card.css">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    
+    <script src="./src/js/loadProducts.js" defer></script>
+    <script src="./src/js/validateForms.js" defer></script>
+    <script src="./src/js/validateNewsletterForm.js" defer></script>
+
     <title>Linx | Produtos para você</title>
 </head>
 <body>
@@ -40,7 +44,7 @@
                 <p>Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut</p>
             </article>
             <fieldset class="resume-fieldset">
-                <form action="" form-js="form-help">
+                <form action="./" data-js="algorithm-form">
                     <div class="input-text-block">
                         <label for="name">Seu nome</label>
                         <input type="text">
@@ -64,23 +68,12 @@
             </fieldset>
         </section>
 
-        <section class="products-list">
-           <div class="section-title">
+        <section class="products-section">
+            <div class="section-title">
                 <h4 class="title-with-bars">Sua seleção especial</h4>
-           </div> 
-           <div class="card-list">
-                <div class="product-card">
-                    <div class="card-image"><img src="" alt=""></div>
-                    <div class="product-description">
-                        <div class="product-name">Nome do produto</div>
-                        <div class="product-oldPrice">De: R$23,99</div>
-                        <div class="product-price">Por: R$19,99</div>
-                        <div class="payment-installments">ou 2x de 9,99</div>
-                        <button class="buy-button">Comprar</button>
-                    </div>
-                </div>   
-            </div>
-            <button class="mid-size-button">Carregar mais produtos aqui!</button>
+            </div> 
+            <div class="product-grid" data-js="product-grid"></div>
+            <button class="mid-size-button" data-js="load-more-button">Carregar mais produtos aqui!</button>
         </section>
 
         <section class="newsletter-section">
@@ -91,21 +84,22 @@
             </div> 
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
             <fieldset class="share-fieldset">
-                <form action="" method="post">
-                    <div class="input-text-block">
-                        <label for="friend_name">Nome do seu amigo:</label>
-                        <input type="text">
+                <form data-js="newsletter-form" method="POST" novalidate >
+                    <div class="input-text-block" data-js="friend-name-block">
+                        <label for="friend-name">Nome do seu amigo:</label>
+                        <input type="text" name="friendName" data-js="friend-name">
+                        <span class="message"></span>
                     </div>
                     <div class="input-text-block">
-                        <label for="friend_email">E-mail dele:</label>
-                        <input type="text">
+                        <label for="friend-email">E-mail dele:</label>
+                        <input type="email" name="friendEmail" data-js="friend-email">
+                        <span class="message"></span>
                     </div>
+                    <button class="mid-size-button" type="submit">Enviar agora</button>
                 </form>
             </fieldset>
-            <button class="mid-size-button">Enviar agora</button>
 
         </section>
-
     </main>
     <footer class="page-footer">
         <small>Testando suas habilidades em HTML, CSS e JS.</small>
@@ -113,4 +107,4 @@
         <small>2019</small>
     </footer>
 </body>
-</html>
+</html> 
