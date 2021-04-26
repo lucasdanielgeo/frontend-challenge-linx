@@ -72,7 +72,8 @@ section {
 .section-title .bar {
     position: absolute;
     z-index: -1;
-    width: 80%;
+    width: 90%;
+    max-width: 90vw;
     height: 1px;
     border-bottom: 1px solid #000;
     transform: translateY(-11px);
@@ -151,6 +152,9 @@ p {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr ;
         column-gap: 20px;
+    }
+    .section-title .bar {
+        max-width: 920px;
     }
 }
 
