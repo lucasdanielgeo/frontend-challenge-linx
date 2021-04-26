@@ -19,4 +19,6 @@ maneira que cada nova solicitação adicione novos itens abaixo dos retornados a
 
 ## Hospedagem
 
-O desafio está disponível em: https://frontend-challenge-linx.vercel.app/.
+O desafio está disponível em: https://frontend-challenge-lucasdaniel.vercel.app/.
+
+lote
