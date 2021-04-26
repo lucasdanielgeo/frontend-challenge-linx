@@ -7,16 +7,18 @@
 
     <link rel="stylesheet" href="/src/styles/reset.css">
     <link rel="stylesheet" href="src/styles/main.css">
-    <link rel="stylesheet" href="src/styles/forms.css">
-    <link rel="stylesheet" href="src/styles/buttons.css">
-    <link rel="stylesheet" href="src/styles/card.css">
+    <link rel="stylesheet" href="src/styles/components/header.css">
+    <link rel="stylesheet" href="src/styles/components/forms.css">
+    <link rel="stylesheet" href="src/styles/components/buttons.css">
+    <link rel="stylesheet" href="src/styles/components/card.css">
+    <link rel="stylesheet" href="src/styles/components/footer.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">    
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     
-    <script src="./src/js/loadProducts.js" defer></script>
-    <script src="./src/js/validateForms.js" defer></script>
-    <script src="./src/js/validateNewsletterForm.js" defer></script>
+    <script type="module" src="./src/js/loadProductsIndex.js"  defer></script>
+    <script type="module" src="./src/js/validateNewsletterForm.js" defer></script>
+    <script type="module" src="./src/js/accordion.js" defer></script>
 
     <title>Linx | Produtos para você</title>
 </head>
@@ -28,23 +30,25 @@
             <p class="header-description">Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
         </div>
         <ul class="header-links">
-            <li><a href="#">Conheça a Linx</a></li>
-            <li><a href="#">Ajude o algoritmo</a></li>
-            <li><a href="#">Seus produtos</a></li>
-            <li><a href="#">Compartilhe</a></li>
+            <li><a class="button header-button" href="#">Conheça a Linx</a></li>
+            <li><a class="button header-button" href="#">Ajude o algoritmo</a></li>
+            <li><a class="button header-button" href="#">Seus produtos</a></li>
+            <li><a class="button header-button" href="#">Compartilhe</a></li>
         </ul>
+
     </header>
     <main class="page-main" data-js="page-main-content">
         <section class="form-section">
-            <article class="resume-article">
-                <div class="section-title">
-                    <h3>Ajude o algoritmo a ser mais certeiro</h3><span class="material-icons-outlined">expand_more</span>
+            <article class="resume-article" data-js="resume-article">
+                <div class="article-title">
+                    <h3>Ajude o algoritmo a ser mais certeiro</h3>
+                    <button class="material-icons-outlined accordion-icon" data-js="accordion-icon">expand_more</button>
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.</p>
-                <p>Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut</p>
+                <p class="article-paragraph" data-js="article-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.</p>
+                <p class="article-paragraph" data-js="article-paragraph">Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices. Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut</p>
             </article>
             <fieldset class="resume-fieldset">
-                <form action="./" data-js="algorithm-form">
+                <form action="./" data-js="algorithm-form" class="algorithm-form">
                     <div class="input-text-block">
                         <label for="name">Seu nome</label>
                         <input type="text">
@@ -63,28 +67,28 @@
                         <input type="radio" name="gender"> 
                         <label for="">Feminino</label>
                     </div>
-                    <button class="submit-button button" submit-button="submit-help">Enviar</button>
+                    <button class="button large-button">Enviar</button>
                 </form>
             </fieldset>
         </section>
 
         <section class="products-section">
             <div class="section-title">
-                <h4 class="title-with-bars">Sua seleção especial</h4>
+                <h4 >Sua seleção especial</h4>
+                <div class="bar"></div>
             </div> 
             <div class="product-grid" data-js="product-grid"></div>
-            <button class="mid-size-button" data-js="load-more-button">Carregar mais produtos aqui!</button>
+            <button class="button  medium-button" data-js="load-more-button">Ainda mais produtos aqui!</button>
         </section>
 
         <section class="newsletter-section">
-            <div class="section-title bar-section">
-                <div class="bar-section-title"></div>
+            <div class="section-title">
                 <h4>Compartilhe sua novidade</h4>
-                <div class="bar-section-title"></div>
+                <div class="bar"></div>
             </div> 
             <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
             <fieldset class="share-fieldset">
-                <form data-js="newsletter-form" method="POST" novalidate >
+                <form action="./" data-js="newsletter-form" method="POST" novalidate >
                     <div class="input-text-block" data-js="friend-name-block">
                         <label for="friend-name">Nome do seu amigo:</label>
                         <input type="text" name="friendName" data-js="friend-name">
@@ -95,16 +99,23 @@
                         <input type="email" name="friendEmail" data-js="friend-email">
                         <span class="message"></span>
                     </div>
-                    <button class="mid-size-button" type="submit">Enviar agora</button>
+                    <div class="button-block">
+                        <button class="button medium-button" type="submit">Enviar agora</button>
+                    </div>
                 </form>
             </fieldset>
 
         </section>
     </main>
     <footer class="page-footer">
-        <small>Testando suas habilidades em HTML, CSS e JS.</small>
-        <small>Linx Inpulse</small>
-        <small>2019</small>
+        <div class="footer-shape"></div>
+        <div class="footer-content">
+            <p>Testando suas habilidades em HTML, CSS e JS. <br>
+                Linx Inpulse <br>
+                2019
+            </p>
+        </div>
+        
     </footer>
 </body>
 </html> 

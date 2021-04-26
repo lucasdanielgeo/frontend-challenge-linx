@@ -16,3 +16,17 @@ const validateEmail = input => {
     const isValid = regex.test(input.value)
     return isValid
 }
+
+const validateCPF = input => {
+    const regex = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/
+    const isValid = regex.test(input.value)
+    return isValid
+}
+
+
+export {
+    cleanErrorMessage,
+    setErrorMessage,
+    validateEmail,
+    validateCPF
+}
