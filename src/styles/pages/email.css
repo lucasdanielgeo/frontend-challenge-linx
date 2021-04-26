@@ -1,0 +1,12 @@
+.product-grid {
+    display: flex;
+    margin-top: 15px;
+}
+.product-item-description {
+    justify-content: space-between;
+    height: 150px;
+}
+a.large-button { 
+    max-width: 380px;
+    margin-top: 60px;
+}

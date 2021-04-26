@@ -1,0 +1,46 @@
+.product-card {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 14px;
+
+    width: 100%;
+}
+.product-item-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.product-description {
+    display: none;
+}
+.card-image { 
+    display: flex;
+    justify-content: center;
+    border: 1px solid var(--border-color-primary); 
+    max-width: 170px;
+    height: 130px;
+}
+.product-name { font: 500 1.4rem Helvetica}
+.product-oldPrice { font: 500 1.2rem Helvetica}
+.product-price { font: 600 1.6rem Helvetica}
+.product-installments { font: 500 1.2rem Helvetica}
+
+@media (min-width: 600px) {
+    .product-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .product-description {
+        display: block;
+        width: 200px;
+    }
+    .product-item-description {
+        margin-top: 1.4rem;
+    }
+    .card-image { 
+        min-width: 200px;
+    }
+}

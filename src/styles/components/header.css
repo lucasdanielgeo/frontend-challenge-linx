@@ -1,0 +1,13 @@
+.page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color-secondary);
+    width: 100vw;
+    height: 300px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+  

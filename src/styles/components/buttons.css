@@ -1,0 +1,50 @@
+.button{
+    margin-top: 2.2rem;
+    background-color: var(--background-color-primary);
+    border: 1px solid var(--background-color-secondary);
+    
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-color-primary);
+
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a.button {
+    display: flex;
+    text-decoration: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+a.header-button {
+    width: 160px;
+}
+
+.large-button { width: 100%;}
+
+.medium-button { width: 260px; margin-top: 50px;}
+
+.small-button { width: 200px; height: 30px;}
+
+a:hover, a:active, a:visited {
+    color: var(--text-color-primary);
+} 
+
+button.accordion-icon { 
+    background-color: var(--background-color-primary); 
+    border: none;
+    color: var(--text-color-primary);
+    cursor: pointer;
+} 
+
+button:hover { 
+    transform: translateY(-2px);
+    transition: .2s;
+}
+
+a.button:hover{transform: none;} 
+

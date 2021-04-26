@@ -1,0 +1,25 @@
+.input-text-block{
+    margin-top: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+} 
+input[type=text], input[type=email]{
+    margin-top: .7rem;
+    height: 30px;
+    width: 99%;
+}
+input:focus[type=text], input:focus[type=email]{
+    border: 1px solid var(--border-color-primary);
+    border-bottom: 3px solid var(--border-color-primary);
+    border-bottom-width: 50%;
+    outline: none;
+}
+
+label {font-size: 1.2rem;}
+.input-radio-block {
+    margin-top: 2.2rem;
+}
+
+
