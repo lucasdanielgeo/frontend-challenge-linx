@@ -1,3 +1,5 @@
+import {  cleanErrorMessage, setErrorMessage, validateEmail } from "./validateForms.js";
+
 const newsletterForm = document.querySelector('[ data-js="newsletter-form" ]')
 const friendName = newsletterForm.friendName
 const friendEmail = newsletterForm.friendEmail
@@ -21,6 +23,9 @@ const checkNewsletterInputs = Event => {
         return false
     } 
     cleanErrorMessage(friendEmail);
+    newsletterForm.submit();
+    window.location.href = "./email.html";
+    
 }
 
 newsletterForm.addEventListener('submit', checkNewsletterInputs);
