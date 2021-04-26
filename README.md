@@ -16,3 +16,7 @@ para inputs vazios e verificação de endereços de e-mail.
  
 A listagem de produtos foi feita adicionando elementos a página através da API disponibilizada, de
 maneira que cada nova solicitação adicione novos itens abaixo dos retornados anteriormente.
+
+## Hospedagem
+
+O desafio está disponível em: https://frontend-challenge-linx.vercel.app/.
